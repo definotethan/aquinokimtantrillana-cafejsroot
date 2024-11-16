@@ -1,0 +1,18 @@
+<h1>CafeJS</h1>
+
+<p>Welcome, <%= user.username %>!</p>
+
+<a href="/">Back to home page</a>
+
+<h2>My Cart</h2>
+
+<ul>
+    <% cartItems.forEach((cartItem) => { %>
+        <li><%= cartItem.quantity %> - <%= cartItem.productName %></li>
+    <% }); %>
+</ul>
+
+<form action="" method="post">
+    <input type="hidden" name="user_id" value="<%= user.id %>">
+    <input type="submit" value="Checkout">
+</form>
